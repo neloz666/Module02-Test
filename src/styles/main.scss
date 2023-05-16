@@ -116,6 +116,7 @@ body {
         justify-content: center;
         align-items: center;
         position: relative;
+        
     }
     
     &__line {
@@ -127,11 +128,17 @@ body {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        &_img {
+            box-shadow: 27px 34px 49px -17px rgba(39, 48, 15, 0.7);
+            border-radius:100%;
+        }
+        
     }
     &__image {
         width: 92%;
+        
     }
-    &__btn {
+       &__btn {
         border:none;
         background-color: transparent;
         padding:0;
@@ -157,28 +164,28 @@ body {
         }
 
         &_1 {
-           top:22;
-           left:75; 
+           top:37px;
+           left:84px; 
            &::before {
-            top:0;
-            left:0;
+            top: 17px;
+            left: 84px;
            }    
         }
         &_2 {
-            top: 200;
-            right:200;
+            top: 181px;
+            right:-4px;
             &::before {
-                top:200;
-                left:200;
+                top:14px;
+                left:-40px;
                }    
         }
 
         &_3 {
-            top:50;
-            right:200;
+            bottom:-32px;
+            right:237px;
             &::before {
-                top:0;
-                left:0;
+                top:-12px;
+                left:0px;
                }    
         }
     }
@@ -188,34 +195,34 @@ body {
     }
     &__tomato {
         position:absolute;
-        bottom:265;
-        right:111;
+        bottom: 131px;
+        right: 78px;    
         width: 11rem;
     }
     &__avocado {
         position:absolute;
-        top:62;
-        right:-15;
+        top:45px;
+        right:-53px;
         width: 17.8rem;
 
     }
     &__cucumber {
         position:absolute;
-        bottom:0;
-        right:100;
+        top: -6px;
+        left: 646px;
         width: 8.5rem;
 
     }
     &__pepper {
         position: absolute;
-        left:0;
-        bottom:0;
+        left: -9px;
+        top: 393px;
         width: 8.6rem;
     }
     &__beans {
         position: absolute;
-        left:0;
-        bottom:0;
+        left: -36px;
+        bottom: 176px;
         width: 10.5rem;
 
     }
