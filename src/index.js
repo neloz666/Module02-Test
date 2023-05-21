@@ -8,7 +8,7 @@ import 'swiper/css/pagination';
 import './styles/main.scss'
 
 var swiper = new Swiper(".offerSwiper", {
-    slidesPerView: 1,
+    slidesPerView: 3,
     spaceBetween: 20,
     loop: true,
     pagination: {
