@@ -9,7 +9,22 @@ import './styles/main.scss'
 
 var swiper = new Swiper(".offerSwiper", {
     slidesPerView: 3,
-    spaceBetween: 20,
+    spaceBetween: 30,
+    loop: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    modules: [Navigation, Pagination],
+  }); 
+
+  var swiper = new Swiper(".trendsSwiper", {
+    slidesPerView: 3,
+    spaceBetween: 30,
     loop: true,
     pagination: {
       el: ".swiper-pagination",
