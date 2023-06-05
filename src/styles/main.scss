@@ -101,9 +101,8 @@ body {
 .logo {
     display: block;
     background-image: url(../images/logo.svg);
-    width: 12rem;
-    height: 3.2rem;
-    ;
+    width: 31rem;
+    height: 4.6rem;
     background-repeat: no-repeat;
     background-size: contain;
 }
@@ -132,6 +131,7 @@ body {
         justify-content: space-between;
         align-items: center;
         gap: 30px;
+        position: relative;
         
 
         
@@ -251,38 +251,38 @@ body {
     }
 
     &__tomato {
-        bottom: 116px;
-        right: 429px;
-        width: 110px;
+        bottom: 11.6rem;
+        right: 42.9rem;
+        width: 11rem;
         
     }
 
     &__avocado {
-        top: 54px;
-        right: 23px;
-        width: 178px;
+        top: 5.4rem;
+        right: 29.9rem;
+        width: 17.8rem;
        
 
     }
 
     &__cucumber {
         top: 0px;
-        left: 717px;
-        width: 85px;
+        left: 100.2rem;
+        width: 8.5rem;
         
 
     }
 
     &__pepper {
-        left: 346px;
-        top: 399px;
+        left: 34.6rem;
+        top: 39.9rem;
         width: 8.6rem;
        
     }
 
     &__beans {
-        left: 312px;
-        bottom: 155px;
+        left: 31.2rem;
+        bottom: 15.5rem;
         width: 10.5rem;
        
 
@@ -881,7 +881,7 @@ body {
 }
 .contact {
     padding-top:147px;
-    padding-bottom: 100px;
+    padding-bottom: 195px;
 
     &-box {
         display: flex;
@@ -992,4 +992,132 @@ body {
         text-decoration: none;
         border-bottom: 1px solid #e8e8e7;
     }
+}
+
+.footer {
+    
+    background-image: url(../images/footer.png);
+    background-size: cover;
+    background-position-x: center;
+    background-repeat: no-repeat;
+ 
+    
+
+    &__box {
+        padding-top:90px;
+        padding-bottom:44px;
+        display:flex;
+        justify-content: space-between;
+
+    }
+    &__list {
+        display:flex;
+        flex-direction: column;
+        gap:24px;
+        margin-top:-4px;
+
+    }
+    &__item {
+        font-size: 1.8rem;
+    }
+    &__link {
+        text-decoration: none;
+        color: $green;
+        &_tel {
+            font-size: 2.7rem;
+            font-family: $font-jost;
+        }
+        &_mail {
+            font-size: 1.8rem;
+            font-family: $font-jost;
+        }
+        
+
+    }
+    &__contact {
+        display:flex;
+        flex-direction: column;
+        gap:32px;
+        margin-top:-9px;
+        
+        
+    }
+    
+    &__text {
+        display:flex;
+        justify-content:space-between;
+        opacity: .8;
+        color: #c6cabe;
+        
+    }
+    &__author {
+        &__link {
+            text-decoration: none;
+            color: #c6cabe;
+            &:hover {
+                cursor: pointer;
+                opacity: 1;
+                color: $green;
+            }
+        }
+
+    }
+}
+.footer-social {
+    display:flex;
+    gap:33px;
+    &__item {
+        width: 45px;
+        height: 45px;
+        border: 1px solid $green;
+        border-radius: 100%;
+        border-color: $green;
+    }
+    &__link {
+        display: block;
+        background-repeat: no-repeat;
+        background-position: center;
+        
+         
+        
+        
+        
+
+    }
+    &__vk {
+        background-image: url(../images/vk.svg);
+        background-size: cover;
+        background-position: center;
+        width: 25px;
+        height:25px; 
+        margin-top:12px;
+        margin-left:11px;
+
+        
+        
+    }
+    &__inst {
+        background-image: url(../images/instagram.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        width: 19px;
+        height: 19px;
+        margin-top: 14px;
+        margin-left: 14px;
+    }
+    &__fb {
+        background-image: url(../images/facebook.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        width: 17px;
+        height: 17px;
+        margin-top: 15px;
+        margin-left: 13px;
+    }
+
+}
+.footer-border {
+    border-top: 1px solid #c6cabe;
 }
