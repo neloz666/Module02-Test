@@ -49,4 +49,22 @@ var swiper = new Swiper(".offerSwiper", {
       prevEl: ".swiper-button-prev",
     },
     modules: [Navigation, Pagination],
+    breakpoints: {
+      320: {
+        slidesPerView:1,
+        slidesPerGroup:1
+      },
+      600: {
+        slidesPerView:1,
+        slidesPerGroup:1
+      },
+      790: {
+        slidesPerView: 2,
+        slidesPerGroup:2
+      },
+      1280: {
+        slidesPerView:3,
+        slidesPerGroup:3
+      },
+    }
   }); 
