@@ -1312,12 +1312,16 @@ body {
         @media (max-width:$r_desk_1280) {
             padding-top: 4.5rem;
         }
+        @media (max-width: $r_tab) {
+            justify-content: center;
+            
+        }
     }
     &__grid {
         display:grid;
 
         grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: 520px 520px;
+        
         gap: 20px;
         @media (max-width:$r_desk_1350) {
             grid-template-columns: repeat(3, 350px); 
@@ -1328,53 +1332,64 @@ body {
         @media (max-width:$r_desk) {
             grid-template-columns: repeat(2, 1fr); 
         }
+        @media (max-width:$r_tab) {
+            gap: 10px;
+        }
     }
 
 
 
     &__grid-item {
-        border: 1px solid rgba($green, .4);
+        border: 1px solid rgba(39,48,15,.4);
         border-radius: 2rem;
         padding: 2.7rem 3rem 3.8rem;
         box-sizing: border-box;
-        height: 520px;
-        display: flex;
-        flex-direction: column;
-        background-repeat: no-repeat;
-        position: relative;
+        transition: .3s;
         @media (max-width:$r_desk_1280) {
         align-items: center;
         }
         @media (max-width: $r_tab) {
             padding: 2.2rem 2rem 2.8rem;
+        @media (max-width:$r_mob500)  {
+            padding: 2.2rem 1.5rem 2.8rem;
+        } 
+           
         }
         z-index: 0;
         &__cover {
             position: relative;
             overflow: hidden;
             width: 100%;
-            height: 200px;
-            max-height:200px;
+            height: 284px;
             text-align: center;
             background-position: center center;
-            padding-bottom:18px;
             @media (max-width: $r_tab) {
                 height: 150px;
             }
             
         }
         &__image {
-                height: 100%;
+            width: 100%;
+            max-width: 351px;    
+            height: 100%;
+            object-fit:contain;
+
         }
 
         &__title {
             font-family: $font-cormorant;
             font-size: 3.0rem;
             color: $green;
-            margin: 0;
-            padding-bottom:21px;
+            margin-top: 1.7rem;
+            margin-bottom: 0;
+            
             @media (max-width: $r_tab) {
                 font-size: 2rem;
+                
+            }
+            @media (max-width: $r_mob500) {
+                max-width: 100px;
+                min-height: 36px;
             }
             
         }
@@ -1383,18 +1398,20 @@ body {
             font-size: 1.6rem;
             line-height: 1;
             opacity: .4;
-            margin:0;
-            padding-bottom:25px;
-            min-height: 55px;
+            margin-top:1.8rem;
+            margin-bottom:0;
+            min-height: 61px;
+            max-width: 300px;
+            line-height: 1.5;
             @media (max-width: $r_tab) {
-                font-size: 1.2rem;
+                font-size: 1.3rem;
             }
         }
         
         &__price {
             font-size: 2.4rem;
-            margin:0;
-            padding-bottom: 30px;
+            margin-top:0;
+            margin-bottom: 3rem;
             @media (max-width: $r_tab) {
                 font-size: 2rem;
             }
@@ -1403,14 +1420,14 @@ body {
             display: flex;
             justify-content: space-between;
             align-items: center ;
-            gap:30px;
+            gap:5%;
         }
     }
     &__btn {
         display: block;
-        margin: 0 auto;
-        margin-top:6rem;
-        padding-left:4.3rem;
+        margin: 6rem auto 0;
+        
+        align-items: center;
         background-color: transparent;
         background-image: url(../images/refresh.png);
         background-repeat: no-repeat;
@@ -1436,9 +1453,10 @@ body {
 }
 .delivery {
     &-box {
-        margin-top:13.7rem;
+        margin-top:7.5rem;
+        line-height: 1.5;
         &__title {
-            width: 65rem;;
+            
         }
         &__list {
             display:flex;
@@ -1470,10 +1488,24 @@ body {
 
         }
         &__description {
-            margin:0;
+            margin:0 auto;
             &_discount {
                 color:$orange;
             }
+            @media (max-width: $r_mob500) {
+                text-align: center;
+            }
+            &_01 {
+                @media (max-width:$r_mob500) {
+                    width: 270px;
+                }
+            }
+            &_02 {
+                @media (max-width:$r_mob500) {
+                    width: 272px;
+                }
+            }
+
         }
         &__payleft {
             max-width:580px;
@@ -1552,18 +1584,28 @@ body {
         border-radius: 4rem;
         display:block;
         transition: .5s;
+        @media (max-width: $r_tab) {
+            font-size: 1.4rem;
+            padding: 1.8rem 0;
+        }
         &:hover{
             border: 1px solid $orange;
             color: $orange;
             transition: .5s;
         }
 
+
     }
 
 }
 .contact {
-    padding-top:14.7rem;
-    padding-bottom: 19.5rem;
+    padding-top:10rem;
+    padding-bottom: 16rem;
+    @media (max-width: 768px) {
+    padding-top: 4rem;
+    padding-bottom: 8rem;
+    }
+
 
     &-box {
         display: flex;
@@ -1594,14 +1636,15 @@ body {
             }
             @media (max-width: $r_tab_900) {
                 margin-left: 0;
-                max-width: 500px;
+                max-width: 265px;
             }
         }
+
         &__item {
             display: flex;
             flex-direction: column;
-            gap: 65px;
-            padding-top:75px;
+            gap: 4.3rem;
+            margin-bottom: 2rem;
         }
         &__link {
             font-family: $font-jost;
