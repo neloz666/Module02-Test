@@ -42,6 +42,17 @@
                     <span class="header__counter">0</span>
                 </button>
             </div>
+
+            <div class="header__dropdown" id="Notification">
+                <div class="header__cover">
+                    <img class="header__img" src="images/milk.png" alt="Молоко">
+                </div>
+                <p class="header__text">
+                    Вы добавили в корзину
+                    <a href="#" class="header__product">молоко топленое</a>
+                </p>
+                <button class="close" onclick="document.getElementById('Notification').style.visibility='hidden'" ></button>
+            </div>
             
         </header>
         <div class="container">
@@ -66,9 +77,15 @@
                     <button class="main__btn main__btn_1" type="button">
                         <span class="main__food">Авокадо</span> 134 руб
                     </button>
-                    <button class="main__btn main__btn_2" type="button">
+                    <button class="main__btn main__btn_2" type="button" onclick="document.getElementById('FoodTwo').style.visibility='visible'">
                         <span class="main__food">Картофель</span> 169 руб
                     </button>
+                    <div class="main__about main__about_2" id="FoodTwo">
+                        <h3 class="main__title">Картофель</h3>
+                        <p class="main__description">Картофель Молодой, Свежий урожай, 1кг</p>
+                        <p class="main__price">169 руб/кг</p>
+                        <button class="close" onclick="document.getElementById('FoodTwo').style.visibility='hidden'"></button>
+                    </div>  
                     <button class="main__btn main__btn_3" type="button">
                         <span class="main__food">Томаты</span> 215 руб
                     </button>
@@ -480,7 +497,7 @@
                     </div>    
                     
                     <div class="delivery-box__payright">
-                        <p class="delivery-box__description description_size-s ">
+                        <p class="delivery-box__description description_size-s delivery-box__description_02">
                             Вы можете оплатить заказ наличными или картой курьеру, либо воспользоваться функцией онлайн-оплаты и получить <span class="delivery-box__description_discount">скидку&nbsp;5%.</span>
                         </p>
                         <div class="delivery-box__cards">
@@ -510,11 +527,15 @@
                                 Если у вас остались вопросы, вы можете задать отправить нам ваши данные. Наши менеджеры свяжутся с вами в течении рабочего дня.
                             </p>
                             <ul class="contact-box__list">
-                                <li>
-                                    <a href="tel:+79453425555" class="contact-box__link">+7 945 342 55 55</a>
+                                <li class="contact-box__item">
+                                    <a class="contact-box__link contact-box__tel" href="tel:+79453425555" >
+                                        +7 945 342 55 55
+                                    </a>
                                 </li>
-                                <li>
-                                    <a href="mailto:healthlyfood@mail.ru" class="contact-box__link">healthlyfood@mail.ru</a>
+                                <li class="contact-box__item">
+                                    <a class="contact-box__link contact-box__mail" href="mailto:healthlyfood@mail.ru" >
+                                        healthlyfood@mail.ru
+                                    </a>
                                 </li>
                             </ul>
                         </div>        

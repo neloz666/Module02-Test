@@ -232,6 +232,7 @@ body {
 
     }
     &__buttons {
+        position: relative;
         @media (max-width: $r_desk_hd) {
             display:flex;
             align-items: center;
@@ -242,7 +243,67 @@ body {
         }
 
     } 
+    &__dropdown {
+        display: flex;
+        align-items: center;
+        gap:15px;
+        position: absolute;
+        right: -70px;
+        top: 130px;
+        border-radius: 30px;
+        background-color: $white;
+        width: 280px;
+        padding: 20px 30px;
+        z-index: 1;
+        box-shadow: 0 0 33px 0 rgba($green, .3);
+        box-sizing: border-box;
+        &::after {
+            content: '';
+            border:9px solid transparent;
+            border-bottom: 17px solid $white;
+            position: absolute;
+            top:-25px;
+            right: 80px;
+    }
 
+    }
+    &__cover {
+        position: relative;
+        width: 4rem;
+        height: 6rem;
+        overflow: hidden;
+    }
+    &__img {
+        position: absolute;
+        width: 4rem;
+        height: 6rem;
+        top:50%;
+        left:50%;
+        transform: translate(-50%, -50%);
+        object-fit: cover;
+    }
+    &__product {
+        display:inline-block;
+        color:$green;
+        text-decoration: none;
+        border-bottom: 1px solid $green;
+    }
+    
+
+}
+.close {
+    display: block;
+    width: 1.6rem;
+    height: 1.6rem;
+    background-size: cover;
+    background-image: url(../images/close.svg);
+    background-repeat: no-repeat;
+    border: none;
+    background-color: transparent;
+    position: absolute;
+    top: 1rem;
+    right: 1.2rem;
+    cursor: pointer;
 }
 
 .logo {
@@ -440,6 +501,7 @@ body {
         position: absolute;
         text-align: left;
         background-color: transparent;
+        cursor:pointer;
         transition: .5s;
         &:hover {
             &::before {
@@ -520,7 +582,39 @@ body {
             }
         }
     }
-
+    &__about {
+        position: absolute;
+        border-radius: 30px;
+        background-color: $white;
+        width: 240px;
+        padding: 20px 30px;
+        z-index: 1;
+        box-shadow: 0 0 33px 0 rgba($green, .3);
+        box-sizing: border-box;
+        visibility: hidden;
+        &_2 {
+            right: -100px;
+            top: 253px;
+        }
+    }
+    &__title {
+        font-size: 2.4rem;
+        font-family: "cormorant",serif;
+        margin-bottom: 0;
+        margin-top: 0;
+    }
+    &__description {
+        font-size: 1.4rem;
+        color: rgba($green, 0.7);
+        margin-top: 2rem;
+        margin-bottom: 0;
+        max-width: 300px;
+        line-height: 1.5;
+    }
+    &__price {
+        font-size: 1.6rem;
+        margin-bottom: 0;
+    }
     &__food {
         display: block;
         color: rgba($green, 0.8)
@@ -1601,106 +1695,128 @@ body {
 .contact {
     padding-top:10rem;
     padding-bottom: 16rem;
-    @media (max-width: 768px) {
-    padding-top: 4rem;
-    padding-bottom: 8rem;
+        @media (max-width: 768px) {
+        padding-top: 4rem;
+        padding-bottom: 8rem;
     }
 
 
     &-box {
         display: flex;
-        gap: 33rem;
-        @media (max-width: $r_desk_1500) {
-            gap:20rem;
-        }
-        @media (max-width: $r_desk_1350) {
-            gap:10rem;
-        }
+        align-items: center;
+        justify-content:space-between;
+
         @media (max-width: $r_desk_1280) {
-            gap:5rem;
+            gap:10%;
         }
-        @media (max-width: $r_tab_900) {
+        @media (max-width: $r_desk) {
+            gap:5%;
+
+        }
+        @media (max-width: $r_tab) {
             flex-direction: column;
-            align-items: center;
-            gap:0;
+                   
         }
+
+
         &__text {
             max-width: 400px;
-            margin-left:12.2rem;
             color: $green;
+            padding-left: 12rem;
+            margin-top: 6rem;
+
+            @media (max-width: $r_desk_1280) {
+                padding-left: 8rem;
+            }
+
             @media (max-width: $r_desk_1120) {
-                margin-left: 5rem;
+                padding-left: 4rem;
             }
             @media (max-width: $r_desk) {
-                margin-left: 3.5REM;
+                padding-left: 3.5rem;
             }
             @media (max-width: $r_tab_900) {
-                margin-left: 0;
-                max-width: 265px;
+                padding-left: 0;
+                text-align: center;
+                 
+            }
+            
+        }
+        &__description {
+            @media (max-width: $r_mob500) {
+                max-width: 300px;
+            }
+            @media (max-width: $r_mob500) {
+                max-width: 272px;
             }
         }
 
+        
+        &__list {
+            list-style-type: none;
+            font-size: 2.4rem;
+            padding-left: 0;
+            margin-top: 6rem;
+            margin-bottom: 0;
+            @media (max-width: $r_tab) {
+                font-size: 1.5rem;
+                display: flex;
+                justify-content: space-between;
+               
+            }
+            @media (max-width: $r_mob500) {
+               
+
+            }
+            
+        }
         &__item {
-            display: flex;
-            flex-direction: column;
-            gap: 4.3rem;
             margin-bottom: 2rem;
         }
         &__link {
-            font-family: $font-jost;
-            font-size: 2.4rem;
-            color: $green;
-            text-decoration:none;
-            background-image: url(../images/phone.svg);
-            transition: .5s;
-            &:hover {
-                color: $orange;
-                transition: .5s;
+            color: #27300f;
+            text-decoration: none;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+            @media (max-width: $r_tab) {
+                gap:1rem;
             }
-            @media (max-width: $r_tab_900) {
-                font-size: 1.8rem;
+            &::before {
+                content: '';
+                background-repeat: no-repeat;
+                background-position: center;
+                width: 29px;
+                height: 30px;
+                display: block;
             }
-
         }
+        &__tel {
+            &::before {
+                background-image: url(../images/phone.svg);
+                background-size: 29px 30px;
+            }
+        }
+        &__mail {
+            &::before {
+                background-image: url(../images/mail.svg);
+                background-size: 29px 29px;
+            } 
+        }
+                
+        
         &__form {
-            margin-top:52px;
-            width: 590px;
-            height:52px;
-            @media (max-width: $r_tab_900) {
-                margin-bottom: 35rem;
-            }
-        }
-
-        &__list {
-            padding-top:6rem;
-            display:flex;
-            flex-direction: column;
-            gap:5px;
-            @media (max-width: $r_tab_900) {
-                flex-direction: row;
-               gap: 0;
-               justify-content: space-between;
-               
-            }
-        }
-        &__list li:nth-child(1) {
-                    background-image: url(../images/phone.svg);
-                    background-size: 9%;
-                    background-repeat: no-repeat;
-                    font-weight: 700;
-                    padding-left:58px;
-                    width: 290px;
-                    height: 40px;
-                }
-        &__list li:nth-child(2) {
-                    background-image: url(../images/mail.svg);
-                    width: 290px;
-                    height: 26px;
-                    background-size: 9%;
-                    background-repeat: no-repeat;
-                    padding-left:58px;
-                    font-weight: 700;
-                }
+                    margin-top:52px;
+                    flex-basis:589px;
+                    @media (max-width: $r_desk_1280) {
+                        flex-basis: auto;
+                        flex-grow:1;
+                    }
+                    /*@media (max-width: $r_tab_900) {
+                        margin-bottom: 35rem;
+                    }*/
+        }       
             
     }
         
@@ -1775,11 +1891,15 @@ body {
         padding-bottom:4.4rem;
         display:flex;
         justify-content: space-between;
+        @media (max-width: $r_desk_1280) {
+            gap:9%
+        }
         @media (max-width: $r_tab_900) {
             flex-direction: column;
             align-items: center;
             padding-bottom: 3rem;
         }
+        
 
     }
     &__list {
