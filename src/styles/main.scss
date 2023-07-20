@@ -592,9 +592,17 @@ body {
         box-shadow: 0 0 33px 0 rgba($green, .3);
         box-sizing: border-box;
         visibility: hidden;
+        &_1 {
+            left: 0px;
+            top: 110px;
+        }
         &_2 {
             right: -100px;
             top: 253px;
+        }
+        &_3 {
+            right: 50px;
+            bottom: 50px;
         }
     }
     &__title {
